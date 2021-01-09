@@ -13,7 +13,9 @@ class SlingShot{
         this.sling = Constraint.create(options);
         World.add(world, this.sling);
     }
-
+    birdattch(body){
+        this.sling.bodyA=body;
+    }
     fly(){
         this.sling.bodyA = null;
     }
@@ -27,7 +29,7 @@ class SlingShot{
             push();
             
             stroke(48,22,8);
-            if(pointA.x < 220) {
+            if(pointA.x < 210) {
                 strokeWeight(7);
                 line(pointA.x - 20, pointA.y, pointB.x -10, pointB.y);
                 line(pointA.x - 20, pointA.y, pointB.x + 30, pointB.y - 3);
